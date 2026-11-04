@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aseguradoras · Policlínica Vitalia</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Barra superior (lg) -->
+  <div class="bg-vitalia-profundo text-white small py-2 d-none d-lg-block">
+    <div class="container d-flex justify-content-between">
+      <span><i class="bi bi-geo-alt-fill text-coral-claro"></i> Avenida de la Salud, 25 · Sevilla</span>
+      <span>
+        <i class="bi bi-telephone-fill text-coral-claro"></i> 955 000 000
+        <span class="mx-2">|</span>
+        <i class="bi bi-clock-fill text-coral-claro"></i> L-V 8:00-21:00 · S 9:00-14:00
+      </span>
+    </div>
+  </div>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-vitalia sticky-top shadow-sm" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" width="36" height="36" alt="Logotipo de Policlínica Vitalia">
+        Policlínica <span class="text-coral-claro">Vitalia</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-heart"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="cuadro-medico.html"><i class="bi bi-people"></i> Cuadro médico</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="aseguradoras.html"><i class="bi bi-shield-check"></i> Aseguradoras</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope"></i> Contacto</a></li>
+        </ul>
+        <a class="btn btn-coral ms-lg-3 d-none d-lg-inline-block" href="contacto.html">
+          <i class="bi bi-calendar-plus"></i> Pedir cita
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabecera de la página -->
+  <header class="bg-vitalia-suave py-4 py-lg-5">
+    <div class="container animar-entrada">
+      <nav aria-label="Migas de pan">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="index.html" class="text-vitalia">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Aseguradoras</li>
+        </ol>
+      </nav>
+      <h1 class="fw-bold text-vitalia-oscuro">Aseguradoras y coberturas</h1>
+      <p class="lead mb-0 d-none d-md-block">Comprueba si tu compañía cubre la consulta antes de venir.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <div class="alert bg-vitalia-suave border-vitalia d-flex gap-2 align-items-start" role="alert">
+      <i class="bi bi-credit-card-2-front-fill text-vitalia fs-5"></i>
+      <div>Trae siempre la <strong>tarjeta de tu aseguradora</strong> y el DNI. Algunas pruebas necesitan autorización previa de la compañía.</div>
+    </div>
+
+    <!-- cards con imagen -->
+    <section class="mt-4">
+      <h2 class="h4 fw-bold text-vitalia-oscuro mb-3"><i class="bi bi-buildings"></i> Compañías concertadas</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-elevar">
+            <img src="img/aseg-saludcerca.svg" class="card-img-top border-bottom" alt="Logotipo de Salud Cerca">
+            <div class="card-body">
+              <span class="badge badge-vitalia mb-2">Cobertura total</span>
+              <p class="card-text small mb-2">Servicios cubiertos</p>
+              <div class="progress" role="progressbar" aria-label="Servicios cubiertos por Salud Cerca" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-vitalia" style="width: 100%">100%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-elevar">
+            <img src="img/aseg-medicor.svg" class="card-img-top border-bottom" alt="Logotipo de Medicor">
+            <div class="card-body">
+              <span class="badge badge-vitalia mb-2">Cobertura total</span>
+              <p class="card-text small mb-2">Servicios cubiertos</p>
+              <div class="progress" role="progressbar" aria-label="Servicios cubiertos por Medicor" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-vitalia" style="width: 83%">83%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-elevar">
+            <img src="img/aseg-previsora.svg" class="card-img-top border-bottom" alt="Logotipo de Previsora Sur">
+            <div class="card-body">
+              <span class="badge badge-coral mb-2">Con copago</span>
+              <i class="bi bi-question-circle text-coral" data-bs-toggle="tooltip" data-bs-title="Copago de 5 € por consulta de especialista"></i>
+              <p class="card-text small mb-2">Servicios cubiertos</p>
+              <div class="progress" role="progressbar" aria-label="Servicios cubiertos por Previsora Sur" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-coral" style="width: 67%">67%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 border-0 shadow-sm card-elevar">
+            <img src="img/aseg-bienestar.svg" class="card-img-top border-bottom" alt="Logotipo de Bienestar Total">
+            <div class="card-body">
+              <span class="badge badge-coral mb-2">Con copago</span>
+              <i class="bi bi-question-circle text-coral" data-bs-toggle="tooltip" data-bs-title="Copago de 8 € por prueba diagnóstica"></i>
+              <p class="card-text small mb-2">Servicios cubiertos</p>
+              <div class="progress" role="progressbar" aria-label="Servicios cubiertos por Bienestar Total" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-coral" style="width: 50%">50%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparativa de coberturas -->
+    <section class="mt-5">
+      <h2 class="h4 fw-bold text-vitalia-oscuro mb-3"><i class="bi bi-ui-checks-grid"></i> Comparativa de coberturas</h2>
+
+      <!--  tabla  -->
+      <div class="table-responsive d-none d-md-block">
+        <table class="table table-bordered align-middle text-center tabla-vitalia bg-white shadow-sm">
+          <thead>
+            <tr>
+              <th scope="col" class="text-start">Servicio</th>
+              <th scope="col">Salud Cerca</th>
+              <th scope="col">Medicor</th>
+              <th scope="col">Previsora Sur</th>
+              <th scope="col">Bienestar Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row" class="text-start fw-semibold">Medicina general</th><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td></tr>
+            <tr><th scope="row" class="text-start fw-semibold">Especialistas</th><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td></tr>
+            <tr><th scope="row" class="text-start fw-semibold">Pruebas diagnósticas</th><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-x-circle-fill text-coral" aria-label="No"></i></td></tr>
+            <tr><th scope="row" class="text-start fw-semibold">Urgencias 24 h</th><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td></tr>
+            <tr><th scope="row" class="text-start fw-semibold">Fisioterapia</th><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-x-circle-fill text-coral" aria-label="No"></i></td><td><i class="bi bi-x-circle-fill text-coral" aria-label="No"></i></td><td><i class="bi bi-x-circle-fill text-coral" aria-label="No"></i></td></tr>
+            <tr><th scope="row" class="text-start fw-semibold">Cirugía ambulatoria</th><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-check-circle-fill text-vitalia" aria-label="Sí"></i></td><td><i class="bi bi-x-circle-fill text-coral" aria-label="No"></i></td><td><i class="bi bi-x-circle-fill text-coral" aria-label="No"></i></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Movil -->
+      <div class="accordion acordeon-vitalia d-md-none" id="acordeonCoberturas">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#cobSalud" aria-expanded="true" aria-controls="cobSalud">Salud Cerca</button>
+          </h3>
+          <div id="cobSalud" class="accordion-collapse collapse show" data-bs-parent="#acordeonCoberturas">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="bi bi-check-circle-fill text-vitalia"></i> Todos los servicios</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cobMedicor" aria-expanded="false" aria-controls="cobMedicor">Medicor</button>
+          </h3>
+          <div id="cobMedicor" class="accordion-collapse collapse" data-bs-parent="#acordeonCoberturas">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="bi bi-check-circle-fill text-vitalia"></i> General, especialistas, pruebas, urgencias y cirugía</li>
+              <li class="list-group-item"><i class="bi bi-x-circle-fill text-coral"></i> Fisioterapia</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cobPrevisora" aria-expanded="false" aria-controls="cobPrevisora">Previsora Sur</button>
+          </h3>
+          <div id="cobPrevisora" class="accordion-collapse collapse" data-bs-parent="#acordeonCoberturas">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="bi bi-check-circle-fill text-vitalia"></i> General, especialistas, pruebas y urgencias</li>
+              <li class="list-group-item"><i class="bi bi-x-circle-fill text-coral"></i> Fisioterapia y cirugía</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cobBienestar" aria-expanded="false" aria-controls="cobBienestar">Bienestar Total</button>
+          </h3>
+          <div id="cobBienestar" class="accordion-collapse collapse" data-bs-parent="#acordeonCoberturas">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="bi bi-check-circle-fill text-vitalia"></i> General, especialistas y urgencias</li>
+              <li class="list-group-item"><i class="bi bi-x-circle-fill text-coral"></i> Pruebas, fisioterapia y cirugía</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifas para pacientes privados -->
+    <section class="mt-5">
+      <div class="row g-4 align-items-start">
+        <div class="col-12 col-lg-7">
+          <h2 class="h4 fw-bold text-vitalia-oscuro mb-3"><i class="bi bi-cash-coin"></i> Tarifas para pacientes privados</h2>
+          <div class="table-responsive">
+            <table class="table table-striped align-middle tabla-vitalia bg-white shadow-sm">
+              <thead>
+                <tr><th scope="col">Servicio</th><th scope="col" class="text-end">Precio</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Consulta de medicina general</td><td class="text-end">45 €</td></tr>
+                <tr><td>Consulta de especialista</td><td class="text-end">70 €</td></tr>
+                <tr><td>Analítica básica</td><td class="text-end">30 €</td></tr>
+                <tr><td>Radiografía simple</td><td class="text-end">40 €</td></tr>
+                <tr><td>Ecografía</td><td class="text-end">80 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- Formas de pago: solo escritorio -->
+        <div class="col-12 col-lg-5 d-none d-lg-block">
+          <div class="bg-white rounded-4 shadow-sm p-4">
+            <h3 class="h5 fw-bold text-vitalia-oscuro"><i class="bi bi-wallet2"></i> Formas de pago</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-credit-card text-vitalia"></i> Tarjeta</span><span class="badge badge-suave">Sin comisión</span></li>
+              <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-phone text-vitalia"></i> Bizum</span><span class="badge badge-suave">Sin comisión</span></li>
+              <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-cash text-vitalia"></i> Efectivo</span><span class="badge badge-suave">En recepción</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botón flotante de llamada: solo móvil y tablet -->
+  <a href="tel:+34955000000" class="btn btn-coral rounded-circle shadow boton-flotante d-flex d-lg-none align-items-center justify-content-center"
+     data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Llamar: 955 000 000" aria-label="Llamar a la policlínica">
+    <i class="bi bi-telephone-fill fs-4"></i>
+  </a>
+
+  <!-- Pie de página -->
+  <footer class="footer-vitalia py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8 text-center text-md-start">
+          <p class="fuente-titulo fw-semibold mb-1"><img src="img/logo.svg" width="24" height="24" alt=""> Policlínica Vitalia</p>
+          <p class="small mb-0 d-none d-md-block">Avenida de la Salud, 25 · 41001 Sevilla · 955 000 000</p>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-end fs-5">
+          <a href="#" class="me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <hr class="border-light opacity-25">
+      <p class="small text-center mb-0">Página diseñada por <strong>David Jiménez Martín</strong> · Grupo 5 · Desarrollo de Interfaces · 2º DAM</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

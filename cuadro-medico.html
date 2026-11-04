@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuadro médico · Policlínica Vitalia</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Barra superior (lg) -->
+  <div class="bg-vitalia-profundo text-white small py-2 d-none d-lg-block">
+    <div class="container d-flex justify-content-between">
+      <span><i class="bi bi-geo-alt-fill text-coral-claro"></i> Avenida de la Salud, 25 · Sevilla</span>
+      <span>
+        <i class="bi bi-telephone-fill text-coral-claro"></i> 955 000 000
+        <span class="mx-2">|</span>
+        <i class="bi bi-clock-fill text-coral-claro"></i> L-V 8:00-21:00 · S 9:00-14:00
+      </span>
+    </div>
+  </div>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-vitalia sticky-top shadow-sm" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" width="36" height="36" alt="Logotipo de Policlínica Vitalia">
+        Policlínica <span class="text-coral-claro">Vitalia</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-heart"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="cuadro-medico.html"><i class="bi bi-people"></i> Cuadro médico</a></li>
+          <li class="nav-item"><a class="nav-link" href="aseguradoras.html"><i class="bi bi-shield-check"></i> Aseguradoras</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope"></i> Contacto</a></li>
+        </ul>
+        <a class="btn btn-coral ms-lg-3 d-none d-lg-inline-block" href="contacto.html">
+          <i class="bi bi-calendar-plus"></i> Pedir cita
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabecera de la página -->
+  <header class="bg-vitalia-suave py-4 py-lg-5">
+    <div class="container animar-entrada">
+      <nav aria-label="Migas de pan">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="index.html" class="text-vitalia">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cuadro médico</li>
+        </ol>
+      </nav>
+      <h1 class="fw-bold text-vitalia-oscuro">Cuadro médico</h1>
+      <p class="lead mb-0 d-none d-md-block">Conoce a nuestros especialistas y en qué planta encontrar cada consulta.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4 g-lg-5">
+
+      <!-- Especialidades (acordeón) -->
+      <aside class="col-12 col-lg-4">
+        <h2 class="h4 fw-bold text-vitalia-oscuro mb-3"><i class="bi bi-diagram-3"></i> Especialidades</h2>
+        <div class="accordion acordeon-vitalia shadow-sm" id="acordeonEspecialidades">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#espCardio" aria-expanded="true" aria-controls="espCardio">
+                <i class="bi bi-heart-pulse text-coral me-2"></i> Cardiología
+              </button>
+            </h3>
+            <div id="espCardio" class="accordion-collapse collapse show" data-bs-parent="#acordeonEspecialidades">
+              <div class="accordion-body">
+                <span class="badge badge-vitalia">Planta 1</span> <span class="badge badge-coral">Nuevo</span>
+                <p class="mt-2 mb-0">Electrocardiogramas, ecocardiografías, pruebas de esfuerzo y Holter.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#espPedia" aria-expanded="false" aria-controls="espPedia">
+                <i class="bi bi-balloon-heart text-coral me-2"></i> Pediatría
+              </button>
+            </h3>
+            <div id="espPedia" class="accordion-collapse collapse" data-bs-parent="#acordeonEspecialidades">
+              <div class="accordion-body">
+                <span class="badge badge-vitalia">Planta 1</span>
+                <p class="mt-2 mb-0">Revisiones del niño sano, vacunación y consulta de lactancia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#espDerma" aria-expanded="false" aria-controls="espDerma">
+                <i class="bi bi-droplet-half text-coral me-2"></i> Dermatología
+              </button>
+            </h3>
+            <div id="espDerma" class="accordion-collapse collapse" data-bs-parent="#acordeonEspecialidades">
+              <div class="accordion-body">
+                <span class="badge badge-vitalia">Planta 2</span>
+                <p class="mt-2 mb-0">Dermatoscopia digital, revisión de lunares y tratamientos del acné.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#espTrauma" aria-expanded="false" aria-controls="espTrauma">
+                <i class="bi bi-bandaid text-coral me-2"></i> Traumatología
+              </button>
+            </h3>
+            <div id="espTrauma" class="accordion-collapse collapse" data-bs-parent="#acordeonEspecialidades">
+              <div class="accordion-body">
+                <span class="badge badge-vitalia">Planta 0</span>
+                <p class="mt-2 mb-0">Lesiones deportivas, infiltraciones y seguimiento de fracturas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#espOftal" aria-expanded="false" aria-controls="espOftal">
+                <i class="bi bi-eye text-coral me-2"></i> Oftalmología
+              </button>
+            </h3>
+            <div id="espOftal" class="accordion-collapse collapse" data-bs-parent="#acordeonEspecialidades">
+              <div class="accordion-body">
+                <span class="badge badge-vitalia">Planta 2</span>
+                <p class="mt-2 mb-0">Graduación de la vista, glaucoma y cirugía refractiva.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#espGine" aria-expanded="false" aria-controls="espGine">
+                <i class="bi bi-gender-female text-coral me-2"></i> Ginecología
+              </button>
+            </h3>
+            <div id="espGine" class="accordion-collapse collapse" data-bs-parent="#acordeonEspecialidades">
+              <div class="accordion-body">
+                <span class="badge badge-vitalia">Planta 1</span>
+                <p class="mt-2 mb-0">Revisiones anuales, ecografías y control del embarazo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aviso: solo en escritorio -->
+        <div class="alert bg-coral-suave border-coral mt-4 d-none d-lg-block" role="alert">
+          <i class="bi bi-info-circle-fill text-coral"></i>
+          ¿No sabes a qué especialista acudir? Pide cita en <strong>medicina general</strong> y te orientaremos.
+        </div>
+      </aside>
+
+      <!-- Médicos (cards con imagen) -->
+      <section class="col-12 col-lg-8">
+        <h2 class="h4 fw-bold text-vitalia-oscuro mb-3"><i class="bi bi-person-badge"></i> Nuestros médicos</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-elevar">
+              <img src="img/medico-2.svg" class="card-img-top" alt="Avatar de la Dra. Elena Martos">
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold mb-1">Dra. Elena Martos Ruiz</h3>
+                <p class="text-vitalia mb-2">Cardiología</p>
+                <span class="badge badge-suave"><i class="bi bi-sun"></i> Mañana</span>
+                <i class="bi bi-patch-check-fill text-coral ms-1" data-bs-toggle="tooltip" data-bs-title="Colegiada n.º 41/2804512"></i>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contacto.html" class="btn btn-sm btn-outline-vitalia w-100">Pedir cita</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-elevar">
+              <img src="img/medico-4.svg" class="card-img-top" alt="Avatar de la Dra. Lucía Ferrer">
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold mb-1">Dra. Lucía Ferrer Gil</h3>
+                <p class="text-vitalia mb-2">Pediatría</p>
+                <span class="badge badge-suave"><i class="bi bi-sun"></i> Mañana</span>
+                <i class="bi bi-patch-check-fill text-coral ms-1" data-bs-toggle="tooltip" data-bs-title="Colegiada n.º 41/2507741"></i>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contacto.html" class="btn btn-sm btn-outline-vitalia w-100">Pedir cita</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm card-elevar">
+              <img src="img/medico-3.svg" class="card-img-top" alt="Avatar del Dr. Samuel Okafor">
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold mb-1">Dr. Samuel Okafor Díaz</h3>
+                <p class="text-vitalia mb-2">Dermatología</p>
+                <span class="badge badge-coral"><i class="bi bi-moon"></i> Tarde</span>
+                <i class="bi bi-patch-check-fill text-coral ms-1" data-bs-toggle="tooltip" data-bs-title="Colegiado n.º 41/2201986"></i>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contacto.html" class="btn btn-sm btn-outline-vitalia w-100">Pedir cita</a>
+              </div>
+            </div>
+          </div>
+          <!-- tablet (md) -->
+          <div class="col d-none d-md-block">
+            <div class="card h-100 border-0 shadow-sm card-elevar">
+              <img src="img/medico-1.svg" class="card-img-top" alt="Avatar del Dr. Andrés Molina">
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold mb-1">Dr. Andrés Molina Castro</h3>
+                <p class="text-vitalia mb-2">Traumatología</p>
+                <span class="badge badge-suave"><i class="bi bi-sun"></i> Mañana</span>
+                <i class="bi bi-patch-check-fill text-coral ms-1" data-bs-toggle="tooltip" data-bs-title="Colegiado n.º 41/1903377"></i>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contacto.html" class="btn btn-sm btn-outline-vitalia w-100">Pedir cita</a>
+              </div>
+            </div>
+          </div>
+          <div class="col d-none d-md-block">
+            <div class="card h-100 border-0 shadow-sm card-elevar">
+              <img src="img/medico-5.svg" class="card-img-top" alt="Avatar de la Dra. Aisha Benali">
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold mb-1">Dra. Aisha Benali Torres</h3>
+                <p class="text-vitalia mb-2">Ginecología</p>
+                <span class="badge badge-coral"><i class="bi bi-moon"></i> Tarde</span>
+                <i class="bi bi-patch-check-fill text-coral ms-1" data-bs-toggle="tooltip" data-bs-title="Colegiada n.º 41/2109653"></i>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contacto.html" class="btn btn-sm btn-outline-vitalia w-100">Pedir cita</a>
+              </div>
+            </div>
+          </div>
+          <div class="col d-none d-md-block">
+            <div class="card h-100 border-0 shadow-sm card-elevar">
+              <img src="img/medico-6.svg" class="card-img-top" alt="Avatar del Dr. Ramón Ibarra">
+              <div class="card-body">
+                <h3 class="card-title h6 fw-bold mb-1">Dr. Ramón Ibarra Soto</h3>
+                <p class="text-vitalia mb-2">Oftalmología</p>
+                <span class="badge badge-coral"><i class="bi bi-moon"></i> Tarde</span>
+                <i class="bi bi-patch-check-fill text-coral ms-1" data-bs-toggle="tooltip" data-bs-title="Colegiado n.º 41/1504420"></i>
+              </div>
+              <div class="card-footer bg-white border-0 pt-0">
+                <a href="contacto.html" class="btn btn-sm btn-outline-vitalia w-100">Pedir cita</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Listado de medicos  -->
+    <section class="mt-5">
+      <h2 class="h4 fw-bold text-vitalia-oscuro mb-3"><i class="bi bi-table"></i> Listado de facultativos</h2>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle tabla-vitalia bg-white shadow-sm">
+          <thead>
+            <tr>
+              <th scope="col">Médico</th>
+              <th scope="col">Especialidad</th>
+              <th scope="col" class="d-none d-md-table-cell">N.º colegiado</th>
+              <th scope="col">Turno</th>
+              <th scope="col" class="d-none d-lg-table-cell">Planta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Dra. Elena Martos Ruiz</td><td>Cardiología</td><td class="d-none d-md-table-cell">41/2804512</td><td><span class="badge badge-suave">Mañana</span></td><td class="d-none d-lg-table-cell">1</td></tr>
+            <tr><td>Dra. Lucía Ferrer Gil</td><td>Pediatría</td><td class="d-none d-md-table-cell">41/2507741</td><td><span class="badge badge-suave">Mañana</span></td><td class="d-none d-lg-table-cell">1</td></tr>
+            <tr><td>Dr. Samuel Okafor Díaz</td><td>Dermatología</td><td class="d-none d-md-table-cell">41/2201986</td><td><span class="badge badge-coral">Tarde</span></td><td class="d-none d-lg-table-cell">2</td></tr>
+            <tr><td>Dr. Andrés Molina Castro</td><td>Traumatología</td><td class="d-none d-md-table-cell">41/1903377</td><td><span class="badge badge-suave">Mañana</span></td><td class="d-none d-lg-table-cell">0</td></tr>
+            <tr><td>Dra. Aisha Benali Torres</td><td>Ginecología</td><td class="d-none d-md-table-cell">41/2109653</td><td><span class="badge badge-coral">Tarde</span></td><td class="d-none d-lg-table-cell">1</td></tr>
+            <tr><td>Dr. Ramón Ibarra Soto</td><td>Oftalmología</td><td class="d-none d-md-table-cell">41/1504420</td><td><span class="badge badge-coral">Tarde</span></td><td class="d-none d-lg-table-cell">2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Consultas por planta -->
+    <section class="mt-5">
+      <h2 class="h4 fw-bold text-vitalia-oscuro mb-3"><i class="bi bi-building"></i> ¿En qué planta está mi consulta?</h2>
+      <ul class="nav nav-tabs" id="pestanasPlantas" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link tab-vitalia active" id="tab-planta0" data-bs-toggle="tab" data-bs-target="#planta0" type="button" role="tab" aria-controls="planta0" aria-selected="true">Planta 0</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link tab-vitalia" id="tab-planta1" data-bs-toggle="tab" data-bs-target="#planta1" type="button" role="tab" aria-controls="planta1" aria-selected="false">Planta 1</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link tab-vitalia" id="tab-planta2" data-bs-toggle="tab" data-bs-target="#planta2" type="button" role="tab" aria-controls="planta2" aria-selected="false">Planta 2</button>
+        </li>
+      </ul>
+      <div class="tab-content bg-white border border-top-0 rounded-bottom p-3 shadow-sm">
+        <div class="tab-pane fade show active" id="planta0" role="tabpanel" aria-labelledby="tab-planta0">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-door-open text-vitalia"></i> Recepción y admisión</span><span class="badge badge-suave">Entrada</span></li>
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-bandaid text-vitalia"></i> Traumatología</span><span class="badge badge-suave">Consultas 1-4</span></li>
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-radioactive text-vitalia"></i> Radiología</span><span class="badge badge-suave">Sala R</span></li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="planta1" role="tabpanel" aria-labelledby="tab-planta1">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-heart-pulse text-vitalia"></i> Cardiología</span><span class="badge badge-suave">Consultas 10-12</span></li>
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-balloon-heart text-vitalia"></i> Pediatría</span><span class="badge badge-suave">Consultas 13-16</span></li>
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-gender-female text-vitalia"></i> Ginecología</span><span class="badge badge-suave">Consultas 17-18</span></li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="planta2" role="tabpanel" aria-labelledby="tab-planta2">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-droplet-half text-vitalia"></i> Dermatología</span><span class="badge badge-suave">Consultas 20-21</span></li>
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-eye text-vitalia"></i> Oftalmología</span><span class="badge badge-suave">Consultas 22-24</span></li>
+            <li class="list-group-item d-flex justify-content-between"><span><i class="bi bi-capsule text-vitalia"></i> Laboratorio</span><span class="badge badge-suave">Sala L</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Botón flotante de llamada: solo móvil y tablet -->
+  <a href="tel:+34955000000" class="btn btn-coral rounded-circle shadow boton-flotante d-flex d-lg-none align-items-center justify-content-center"
+     data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Llamar: 955 000 000" aria-label="Llamar a la policlínica">
+    <i class="bi bi-telephone-fill fs-4"></i>
+  </a>
+
+  <!-- Pie de página -->
+  <footer class="footer-vitalia py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8 text-center text-md-start">
+          <p class="fuente-titulo fw-semibold mb-1"><img src="img/logo.svg" width="24" height="24" alt=""> Policlínica Vitalia</p>
+          <p class="small mb-0 d-none d-md-block">Avenida de la Salud, 25 · 41001 Sevilla · 955 000 000</p>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-end fs-5">
+          <a href="#" class="me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <hr class="border-light opacity-25">
+      <p class="small text-center mb-0">Página diseñada por <strong>Alejandro Gómez Izquierdo</strong> · Grupo 5 · Desarrollo de Interfaces · 2º DAM</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

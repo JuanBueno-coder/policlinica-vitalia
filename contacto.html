@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · Policlínica Vitalia</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Barra superior(lg) -->
+  <div class="bg-vitalia-profundo text-white small py-2 d-none d-lg-block">
+    <div class="container d-flex justify-content-between">
+      <span><i class="bi bi-geo-alt-fill text-coral-claro"></i> Avenida de la Salud, 25 · Sevilla</span>
+      <span>
+        <i class="bi bi-telephone-fill text-coral-claro"></i> 955 000 000
+        <span class="mx-2">|</span>
+        <i class="bi bi-clock-fill text-coral-claro"></i> L-V 8:00-21:00 · S 9:00-14:00
+      </span>
+    </div>
+  </div>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-vitalia sticky-top shadow-sm" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.svg" width="36" height="36" alt="Logotipo de Policlínica Vitalia">
+        Policlínica <span class="text-coral-claro">Vitalia</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+              aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-heart"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="cuadro-medico.html"><i class="bi bi-people"></i> Cuadro médico</a></li>
+          <li class="nav-item"><a class="nav-link" href="aseguradoras.html"><i class="bi bi-shield-check"></i> Aseguradoras</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html"><i class="bi bi-envelope"></i> Contacto</a></li>
+        </ul>
+        <a class="btn btn-coral ms-lg-3 d-none d-lg-inline-block" href="contacto.html">
+          <i class="bi bi-calendar-plus"></i> Pedir cita
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cabecera de la página -->
+  <header class="bg-vitalia-suave py-4 py-lg-5">
+    <div class="container animar-entrada">
+      <nav aria-label="Migas de pan">
+        <ol class="breadcrumb mb-2">
+          <li class="breadcrumb-item"><a href="index.html" class="text-vitalia">Inicio</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+        </ol>
+      </nav>
+      <h1 class="fw-bold text-vitalia-oscuro">Contacto y consultas</h1>
+      <p class="lead mb-0 d-none d-md-block">Escríbenos tu consulta o pide cita y te llamamos en menos de 24 horas.</p>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4 g-lg-5">
+
+      <!-- Form de consultas generales -->
+      <section class="col-12 col-lg-7">
+        <div class="bg-white rounded-4 shadow-sm p-4 p-lg-5 animar-entrada">
+          <h2 class="h4 fw-bold text-vitalia-oscuro mb-4"><i class="bi bi-chat-dots"></i> Formulario de consulta</h2>
+          <form id="formContacto" class="row g-3 form-vitalia" novalidate>
+            <div class="col-12 col-md-6">
+              <label for="nombre" class="form-label">Nombre y apellidos</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ana García López" required>
+                <div class="invalid-feedback">Escribe tu nombre.</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="600 123 456" pattern="[0-9 ]{9,12}" required>
+                <div class="invalid-feedback">Escribe un teléfono de 9 cifras.</div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-envelope-at"></i></span>
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@correo.es" required>
+                <div class="invalid-feedback">Escribe un correo válido.</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="especialidad" class="form-label">Especialidad</label>
+              <select class="form-select" id="especialidad" name="especialidad" required>
+                <option value="" selected disabled>Elige una especialidad</option>
+                <option>Medicina general</option>
+                <option>Cardiología</option>
+                <option>Pediatría</option>
+                <option>Dermatología</option>
+                <option>Traumatología</option>
+                <option>Oftalmología</option>
+                <option>Ginecología</option>
+              </select>
+              <div class="invalid-feedback">Elige una especialidad.</div>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="aseguradora" class="form-label">Aseguradora</label>
+              <select class="form-select" id="aseguradora" name="aseguradora">
+                <option selected>Paciente privado</option>
+                <option>Salud Cerca</option>
+                <option>Medicor</option>
+                <option>Previsora Sur</option>
+                <option>Bienestar Total</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="fecha" class="form-label">Fecha preferida</label>
+              <input type="date" class="form-control" id="fecha" name="fecha">
+            </div>
+            <div class="col-12 col-md-6">
+              <span class="form-label d-block">Turno preferido</span>
+              <div class="form-check form-check-inline mt-1">
+                <input class="form-check-input" type="radio" name="turno" id="turnoManana" value="manana" checked>
+                <label class="form-check-label" for="turnoManana"><i class="bi bi-sun"></i> Mañana</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="turno" id="turnoTarde" value="tarde">
+                <label class="form-check-label" for="turnoTarde"><i class="bi bi-moon"></i> Tarde</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="mensaje" class="form-label">Motivo de la consulta</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente qué necesitas" required></textarea>
+              <div class="invalid-feedback">Cuéntanos el motivo de tu consulta.</div>
+            </div>
+            <div class="col-12">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="recordatorio" name="recordatorio" checked>
+                <label class="form-check-label" for="recordatorio">Quiero recibir un recordatorio por SMS</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="privacidad" name="privacidad" required>
+                <label class="form-check-label" for="privacidad">He leído y acepto la política de privacidad</label>
+                <div class="invalid-feedback">Debes aceptar la política de privacidad.</div>
+              </div>
+            </div>
+            <div class="col-12 d-grid d-md-flex gap-2">
+              <button type="submit" class="btn btn-coral btn-lg"><i class="bi bi-send"></i> Enviar consulta</button>
+              <button type="reset" class="btn btn-outline-vitalia btn-lg">Borrar</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Datos contacto -->
+      <aside class="col-12 col-lg-5">
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-12">
+            <h2 class="h5 fw-bold text-vitalia-oscuro"><i class="bi bi-telephone-inbound"></i> Contacto directo</h2>
+            <ul class="list-group shadow-sm">
+              <li class="list-group-item"><i class="bi bi-telephone-fill text-vitalia"></i> 955 000 000</li>
+              <li class="list-group-item"><i class="bi bi-whatsapp text-vitalia"></i> 600 000 000 <span class="badge badge-coral ms-1">Solo citas</span></li>
+              <li class="list-group-item"><i class="bi bi-envelope-fill text-vitalia"></i> info@policlinicavitalia.es</li>
+              <li class="list-group-item"><i class="bi bi-geo-alt-fill text-vitalia"></i> Avenida de la Salud, 25 · 41001 Sevilla</li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-12">
+            <h2 class="h5 fw-bold text-vitalia-oscuro"><i class="bi bi-signpost-2"></i> Cómo llegar</h2>
+            <div class="table-responsive">
+              <table class="table table-sm align-middle tabla-vitalia bg-white shadow-sm mb-0">
+                <thead>
+                  <tr><th scope="col">Transporte</th><th scope="col">Línea</th><th scope="col">Parada</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><i class="bi bi-bus-front"></i> Autobús</td><td>27, 32</td><td>Av. de la Salud</td></tr>
+                  <tr><td><i class="bi bi-train-front"></i> Metro</td><td>L1</td><td>Plaza Nueva</td></tr>
+                  <tr><td><i class="bi bi-p-circle"></i> Parking</td><td colspan="2">Propio, 2 h gratis</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Carrusel de instalaciones (md) -->
+          <div class="col-12 d-none d-md-block">
+            <h2 class="h5 fw-bold text-vitalia-oscuro"><i class="bi bi-images"></i> Nuestras instalaciones</h2>
+            <div id="carruselInstalaciones" class="carousel slide carousel-fade rounded-4 overflow-hidden shadow-sm" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active"><img src="img/carrusel-1.svg" class="d-block w-100" alt="Ilustración del edificio"></div>
+                <div class="carousel-item"><img src="img/carrusel-3.svg" class="d-block w-100" alt="Ilustración de la agenda de citas"></div>
+                <div class="carousel-item"><img src="img/carrusel-2.svg" class="d-block w-100" alt="Ilustración de la unidad de cardiología"></div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carruselInstalaciones" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carruselInstalaciones" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Modal de confirmación del envío -->
+  <div class="modal fade" id="modalEnviado" tabindex="-1" aria-labelledby="tituloEnviado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-vitalia text-white">
+          <h2 class="modal-title h5" id="tituloEnviado"><i class="bi bi-check2-circle"></i> Consulta enviada</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Hemos recibido tu consulta. Te llamaremos en menos de 24 horas para confirmar la cita.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-vitalia" data-bs-dismiss="modal">Entendido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón flotante de llamada: solo móvil y tablet -->
+  <a href="tel:+34955000000" class="btn btn-coral rounded-circle shadow boton-flotante d-flex d-lg-none align-items-center justify-content-center"
+     data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Llamar: 955 000 000" aria-label="Llamar a la policlínica">
+    <i class="bi bi-telephone-fill fs-4"></i>
+  </a>
+
+  <!-- Pie de página -->
+  <footer class="footer-vitalia py-4">
+    <div class="container">
+      <div class="row g-3 align-items-center">
+        <div class="col-12 col-md-8 text-center text-md-start">
+          <p class="fuente-titulo fw-semibold mb-1"><img src="img/logo.svg" width="24" height="24" alt=""> Policlínica Vitalia</p>
+          <p class="small mb-0 d-none d-md-block">Avenida de la Salud, 25 · 41001 Sevilla · 955 000 000</p>
+        </div>
+        <div class="col-12 col-md-4 text-center text-md-end fs-5">
+          <a href="#" class="me-3" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="me-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <hr class="border-light opacity-25">
+      <p class="small text-center mb-0">Página diseñada por <strong>Juan Antonio Bueno Rodríguez</strong> · Grupo 5 · Desarrollo de Interfaces · 2º DAM</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

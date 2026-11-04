@@ -1,0 +1,152 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #1E2B2B;
+  background-color: #F6FBFB;
+}
+
+h1, h2, h3, h4, h5, h6,
+.fuente-titulo,
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+}
+.bg-vitalia          { background-color: #157A7A; }
+.bg-vitalia-oscuro   { background-color: #0B5C5C; }
+.bg-vitalia-profundo { background-color: #043B3B; }
+.bg-vitalia-claro    { background-color: #5DB5B5; }
+.bg-vitalia-suave    { background-color: #D6EFEF; }
+.bg-coral            { background-color: #F2735A; }
+.bg-coral-suave      { background-color: #FDE3DD; }
+
+.text-vitalia        { color: #157A7A; }
+.text-vitalia-oscuro { color: #0B5C5C; }
+.text-vitalia-claro  { color: #A8DCDC; }
+.text-coral          { color: #C44B34; }
+.text-coral-claro    { color: #F9A898; }
+
+
+.border-vitalia { border-color: #157A7A !important; }
+.border-coral   { border-color: #F2735A !important; }
+
+
+.btn-vitalia {
+  background-color: #157A7A;
+  border-color: #157A7A;
+  color: #FFFFFF;
+}
+.btn-vitalia:hover,
+.btn-vitalia:focus {
+  background-color: #0B5C5C;
+  border-color: #0B5C5C;
+  color: #FFFFFF;
+}
+
+.btn-coral {
+  background-color: #C44B34;
+  border-color: #C44B34;
+  color: #FFFFFF;
+}
+.btn-coral:hover,
+.btn-coral:focus {
+  background-color: #A63C28;
+  border-color: #A63C28;
+  color: #FFFFFF;
+}
+
+.btn-outline-vitalia {
+  background-color: transparent;
+  border-color: #157A7A;
+  color: #157A7A;
+}
+.btn-outline-vitalia:hover,
+.btn-outline-vitalia:focus {
+  background-color: #157A7A;
+  color: #FFFFFF;
+}
+
+
+.badge-vitalia { background-color: #157A7A; color: #FFFFFF; }
+.badge-coral   { background-color: #F2735A; color: #1E1E1E; }
+.badge-suave   { background-color: #D6EFEF; color: #0B5C5C; }
+
+.navbar-vitalia { background-color: #0B5C5C; }
+.navbar-vitalia .nav-link.active {
+  color: #F9A898;
+  font-weight: 700;
+}
+
+
+.tabla-vitalia thead th {
+  background-color: #157A7A;
+  color: #FFFFFF;
+}
+
+
+.progress-bar-vitalia { background-color: #157A7A; }
+.progress-bar-coral   { background-color: #F2735A; color: #1E1E1E; }
+
+.nav-tabs .nav-link.tab-vitalia       { color: #0B5C5C; }
+.nav-tabs .nav-link.tab-vitalia.active { color: #C44B34; font-weight: 700; }
+
+
+.boton-flotante {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1030;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.footer-vitalia {
+  background-color: #043B3B;
+  color: #D6EFEF;
+}
+.footer-vitalia a { color: #F9A898; }
+
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animar-entrada {
+  animation: aparecer 0.8s ease-out both;
+}
+.animar-retraso-1 { animation-delay: 0.15s; }
+.animar-retraso-2 { animation-delay: 0.30s; }
+.animar-retraso-3 { animation-delay: 0.45s; }
+
+
+.card-elevar {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-elevar:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.5rem rgba(4, 59, 59, 0.18);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .animar-entrada { animation: none; }
+  .card-elevar,
+  .card-elevar:hover { transition: none; transform: none; }
+}
+
+.acordeon-vitalia .accordion-button:not(.collapsed) {
+  background-color: #D6EFEF;
+  color: #0B5C5C;
+  font-weight: 700;
+}
+.acordeon-vitalia .accordion-button:focus {
+  border-color: #5DB5B5;
+  box-shadow: 0 0 0 0.25rem rgba(21, 122, 122, 0.25);
+}
+.form-vitalia .form-control:focus,
+.form-vitalia .form-select:focus,
+.form-vitalia .form-check-input:focus {
+  border-color: #5DB5B5;
+  box-shadow: 0 0 0 0.25rem rgba(21, 122, 122, 0.25);
+}
+.form-vitalia .form-check-input:checked {
+  background-color: #157A7A;
+  border-color: #157A7A;
+}
